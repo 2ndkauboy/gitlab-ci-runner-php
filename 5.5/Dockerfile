@@ -4,6 +4,7 @@ RUN apt-get update \
     && apt-get install -y curl \
                           git \
                           zlib1g-dev \
+    && pecl install xdebug \
     && docker-php-ext-install zip \
     && rm -rf /var/lib/apt/lists/*
 
